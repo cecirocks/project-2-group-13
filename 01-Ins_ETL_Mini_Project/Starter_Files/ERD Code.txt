@@ -1,0 +1,33 @@
+category_df
+-
+category_id varchar(10) PK FK >- campaign_df.category_id
+category varchar(50)
+
+subcategory_df
+-
+subcategory_id varchar(10) PK FK >- campaign_df.subcategory_Id
+subcategory varchar(50)
+
+campaign_df
+-
+cf_id varchar(10) PK
+contact_id int FK
+company_name varchar(50)
+description varchar(100)
+goal int
+pledged int
+outcome int
+backers_count int
+country varchar(3)
+currency int
+launch_date date
+end_date date
+category_id varchar(10) FK
+subcategory_Id varchar(10) FK
+
+contacts_df
+-
+contact_id int PK FK >- campaign_df.contact_id
+first_name varchar(15)
+last_name varchar(15)
+email varchar(50)
